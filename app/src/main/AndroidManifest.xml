@@ -148,6 +148,12 @@
         <activity android:name=".module.rxjava2.usecases.interval.RxCaseIntervalActivity"/>
         <activity android:name=".module.rxjava2.Thread.RxThreadActivity"/>
 
+
+        <!--holen-->
+        <activity android:name=".module.rxjava2.operators.item.RxHolenTestActivity"/>
+        <activity android:name=".module.rxjava2.operators.item.RxLiftActivity"/>
+        <activity android:name=".module.rxjava2.operators.item.RxComposeActivity"/>
+
     </application>
 
 </manifest>

@@ -5,13 +5,16 @@ import android.content.Intent;
 import com.nanchen.rxjava2examples.R;
 import com.nanchen.rxjava2examples.model.OperatorModel;
 import com.nanchen.rxjava2examples.module.rxjava2.CategoryBaseFragment;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxComposeActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxCreateActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDoOnNextActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFilterActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlatMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxHolenTestActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxIntervalActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLiftActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSkipActivity;
@@ -34,6 +37,9 @@ public class OperatorsFragment extends CategoryBaseFragment {
     @Override
     protected void fillData() {
         data = new ArrayList<>();
+        data.add(new OperatorModel("Holen", "My Test", RxHolenTestActivity.class));
+        data.add(new OperatorModel("Lift", "Lift Test", RxLiftActivity.class));
+        data.add(new OperatorModel("Compose", "Compose Test", RxComposeActivity.class));
         data.add(new OperatorModel(getString(R.string.rx_create), "可用于获取一个被观察的对象", RxCreateActivity.class));
         data.add(new OperatorModel(getString(R.string.rx_zip), "合并事件专用," +
                 "分别从两个上游事件中各取出一个组合," +
