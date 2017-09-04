@@ -14,8 +14,10 @@ import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlatMapActivi
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxHolenTestActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxIntervalActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLifecycleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLiftActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxPublishSubjectActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSkipActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxTakeActivity;
@@ -40,6 +42,7 @@ public class OperatorsFragment extends CategoryBaseFragment {
         data.add(new OperatorModel("Holen", "My Test", RxHolenTestActivity.class));
         data.add(new OperatorModel("Lift", "Lift Test", RxLiftActivity.class));
         data.add(new OperatorModel("Compose", "Compose Test", RxComposeActivity.class));
+        data.add(new OperatorModel("lifecycle", "lifecycle Test", RxLifecycleActivity.class));
         data.add(new OperatorModel(getString(R.string.rx_create), "可用于获取一个被观察的对象", RxCreateActivity.class));
         data.add(new OperatorModel(getString(R.string.rx_zip), "合并事件专用," +
                 "分别从两个上游事件中各取出一个组合," +
@@ -70,7 +73,7 @@ public class OperatorsFragment extends CategoryBaseFragment {
         data.add(new OperatorModel(getString(R.string.rx_reduce), "就是一次用一个方法处理一个值，可以有一个seed作为初始值"));
         data.add(new OperatorModel(getString(R.string.rx_scan), "和上面的reduce差不多，区别在于reduce()只输出结果，而scan()会将过程中每一个结果输出"));
         data.add(new OperatorModel(getString(R.string.rx_window), "按照时间划分窗口，将数据发送给不同的Observable"));
-        data.add(new OperatorModel(getString(R.string.rx_PublishSubject), "onNext() 会通知每个观察者，仅此而已"));
+        data.add(new OperatorModel(getString(R.string.rx_PublishSubject), "onNext() 会通知每个观察者，仅此而已",RxPublishSubjectActivity.class));
         data.add(new OperatorModel(getString(R.string.rx_AsyncSubject), "在调用 onComplete() 之前，除了 subscribe() 其它的操作都会被缓存，在调用 onComplete() 之后只有最后一个 onNext() 会生效"));
         data.add(new OperatorModel(getString(R.string.rx_BehaviorSubject), "BehaviorSubject 的最后一次 onNext() 操作会被缓存，然后在 subscribe() 后立刻推给新注册的 Observer"));
         data.add(new OperatorModel(getString(R.string.rx_Completable), "只关心结果，也就是说 Completable 是没有 onNext 的，要么成功要么出错，不关心过程，在 subscribe 后的某个时间点返回结果"));

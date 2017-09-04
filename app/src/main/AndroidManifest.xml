@@ -153,6 +153,7 @@
         <activity android:name=".module.rxjava2.operators.item.RxHolenTestActivity"/>
         <activity android:name=".module.rxjava2.operators.item.RxLiftActivity"/>
         <activity android:name=".module.rxjava2.operators.item.RxComposeActivity"/>
+        <activity android:name=".module.rxjava2.operators.item.RxLifecycleActivity"/>
 
     </application>
 
